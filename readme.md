@@ -1,5 +1,5 @@
-kind of a fast "ssg"
-- uses preact, ejs, sass, ts
+kind of a fast and light "ssg"
+- uses preact, ejs, sass, ts with data fetching at build time
 - parcel for bundling
 - :star: ~12kb init js load vs. ~132kb on a similar parcel build w/ react and NO ssg 
 
