@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:bundler": "tsc --watch src/index.ts --outDir build",
+    "dev:bundler": "tsc --watch src/index.ts --outDir build",
+    "dev": "tsc src/index.ts --outDir build && node build/src/index.js",
     "start": "node build/src/index.js",
+    "clean": "rm -rf .cache build dist",
+    "build": "cross-env NODE_ENV=production tsc src/index.ts --outDir build && cross-env NODE_ENV=production node build/src/index.js",
+    "serve": "serve -s dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,7 +17,9 @@
   "devDependencies": {
     "@types/ejs": "^3.0.6",
     "@types/node": "^14.14.35",
+    "@types/parcel-bundler": "^1.12.3",
     "chokidar": "^3.5.1",
+    "cross-env": "^7.0.3",
     "ejs": "^3.1.6",
     "parcel": "^2.0.0-beta.2",
     "parcel-bundler": "^1.12.5",

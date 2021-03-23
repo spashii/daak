@@ -8,11 +8,18 @@
 	<title>
 		<%= meta.title %>
 	</title>
+	<link rel="stylesheet" href="<%- global.getStylesheet(`home.sass`) %>">
 </head>
 
 <body>
-	<div id="preact-test"></div>
-	<script src="<%- global.getScript(`home.ts`) %>"></script>
+	<h1 id="preact-text"></h1>
+	<div>
+		<img height=100 src="<%- global.getAsset(`kat`, `kitty.jpg`) %>" alt="kat" srcset="">
+		from ejs
+	</div>
+	wrote something here
+	adASdasdlfkj HMR oasdlfkja f
+	<script src="<%- global.getScript(`home.tsx`) %>"></script>
 </body>
 
 </html>
